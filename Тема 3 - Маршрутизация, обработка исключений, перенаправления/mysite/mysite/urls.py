@@ -18,12 +18,14 @@ from django.urls import path, include
 
 from interiors.views import *
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('interiors/', index),  # http://127.0.0.1:8000/interiors
-    #path("categories/", categories),  # http://127.0.0.1:8000/categories
-    #path('', index),  # http://127.0.0.1:8000/interiors страница по умолчанию
+    # path('interiors/', index),  # http://127.0.0.1:8000/interiors
+    # path("categories/", categories),  # http://127.0.0.1:8000/categories
+    # path('', index),  # http://127.0.0.1:8000/interiors страница по умолчанию
     path('', include("interiors.urls"))
 
 ]
 
+handler404 = page_not_found
